@@ -56,7 +56,8 @@ public class MavenPublisher {
 
   private static final Logger LOG = Logger.getLogger(MavenPublisher.class.getName());
   private static final ExecutorService EXECUTOR = Executors.newFixedThreadPool(1);
-  private static final String[] SUPPORTED_SCHEMES = {"file:/", "https://", "gs://"};
+  private static final String[] SUPPORTED_SCHEMES = {"file:/", "https://",
+"gs://", "http://"};
 
   public static void main(String[] args) throws IOException, InterruptedException, ExecutionException, TimeoutException {
     String repo = args[0];
